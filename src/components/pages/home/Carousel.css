@@ -1,0 +1,18 @@
+.carousel-image {
+    height: 600px;
+  }
+  
+  @media (max-width: 1024px) {
+    /* For iPads and below */
+    .carousel-image {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For mobile devices */
+    .carousel-image {
+      height: 300px;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+/* Full-width background image */
+.gallery-background {
+    background-image: url('https://sreebhadrakalimatha.com/images/background/foot-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;  /* Full width of the viewport */
+    min-height: 100vh;  /* Minimum height: Full height of the viewport */
+    padding: 50px 0;  /* Optional padding */
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between images */
+  }
+  

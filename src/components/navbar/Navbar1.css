@@ -1,0 +1,218 @@
+
+.navabar-itzone{
+	max-width: 100%; /* Ensures the container does not exceed the viewport width */
+	overflow-x: hidden; 
+}
+.navbar {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	position: relative; /* Adjusted to relative for context */
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	z-index: 1000;
+  }
+  
+  .navbar-container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  /* Scrollable content styling */
+  .scroll-content {
+	scroll-behavior: smooth;
+  }
+  
+  /* Social Media Icons Styling */
+  a[href*="instagram.com"] .fa-instagram {
+	color: #c13584; /* Instagram color */
+  }
+  
+  a[href*="twitter.com"] .fa-twitter {
+	color: #1da1f2; /* Twitter color */
+  }
+  
+  a[href*="facebook.com"] .fa-facebook {
+	color: #1877f2; /* Facebook color */
+  }
+  
+  .para {
+	justify-content: space-around;
+  }
+  
+  .nav {
+	margin-top: 20px;
+	justify-content: space-between;
+	height: 20px;
+  }
+  
+  /* Logo Styling */
+  .logo {
+	transition: transform 0.3s ease;
+	border-radius: 18px;
+	margin-left: 25px;
+  }
+  
+  .logo:hover {
+	transform: scale(1.1);
+  }
+  
+  /* Navigation Links Styling */
+  .nav-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 500;
+  }
+  
+  .nav-links li {
+	margin: 0 20px;
+	position: relative; /* For dropdown positioning */
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-links li:hover {
+	transform: translateY(-2px);
+  }
+  
+  .nav-link, .nav-links a {
+	color: #5161ce;
+	text-decoration: none;
+	display: inline-block;
+	transition: color 0.3s ease;
+	padding: 10px 20px; /* Button-like appearance */
+	border-radius: 20px;
+  }
+  
+  .nav-links a:hover {
+	color: #5161ce;
+  }
+  
+  .nav-links a:active, .nav-links .active {
+	color: #022B51; 
+	font-weight: bold;
+	background-color: #CCE0F5; /* Light blue for active state */
+  }
+  
+  /* Menu Toggle Styling */
+  .menu-toggle {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	padding: 10px;
+  }
+  
+  .bar {
+	width: 30px;
+	height: 3px;
+	background-color: #022B51;
+	border-radius: 2px;
+  }
+  
+  .close-icon .bar {
+	width: 25px; /* Cross bar width */
+	height: 2px; /* Cross bar height */
+	background-color: #333; /* Cross bar color */
+	margin: 6px 0; /* Space between cross bars */
+	transition: 0.3s;
+  }
+  
+  .close-icon .bar:first-child {
+	transform: rotate(45deg); /* Rotate first bar for X shape */
+	transform-origin: 50% 50%;
+  }
+  
+  .close-icon .bar:last-child {
+	transform: rotate(-45deg); /* Rotate second bar for X shape */
+	transform-origin: 50% 50%;
+  }
+  
+  @media (min-width: 992px) {
+	.menu-toggle {
+		display: none;
+	}
+  }
+  
+  @media (max-width: 991px) {
+	.nav-links {
+		display: none;
+		position: fixed;
+		flex-direction: column;
+		background-color: #fff;
+		top: 60px;
+		width: 100%;
+		box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+		z-index: 999;
+	}
+  
+	.nav-links.open {
+		display: flex;
+	}
+  
+	.nav-links li {
+		text-align: center;
+		padding: 15px 0;
+	}
+  
+	.nav-link, .nav-links a {
+		display: block; /* Change back to block for mobile view */
+		padding: 15px 20px; /* Adjust padding for mobile view */
+		transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+	}
+  
+	
+  
+	
+  }
+  
+  .service-dropdown {
+	position: absolute;
+	top: 100%; /* This should align right at the bottom edge of the navbar */
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 1050; /* High enough to be above other content */
+	width: 600px;
+	border-radius: 5px; /* Optional for styling */
+  }
+  
+  .service-dropdown-column button, .service-dropdown-column a {
+	background-color: #fff; 
+   
+  }
+  
+  .service-dropdown-column button:hover {
+	background-color: #fff; 
+	color:blue; /* Changing the text color for better visibility on white background */
+	/* Add any additional styling you want on hover */
+  }
+  .service-dropdown-column {
+	flex: 1;
+	padding: 10px;
+	
+  }
+  .service-id1, .service-id2, .service-id3, .service-id4 {
+	color:blue;
+	display: flex;
+	justify-content: flex-start;
+  }
+  
+  
+  
+  
+  
+  
+  /* Modified hover style for dropdown links */
+  
+  

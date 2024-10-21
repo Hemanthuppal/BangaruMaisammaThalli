@@ -1,0 +1,97 @@
+/* Contact.css */
+
+.contact-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 400px; /* Fixed height for larger screens */
+  overflow: hidden; /* Hide overflow */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
+  object-position: center top; /* Focuses on the center top of the image */
+}
+
+.contact-section {
+  padding: 20px; /* Reduced padding for better fit */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between sections */
+  flex-wrap: wrap; /* Allows wrapping in smaller screens */
+  margin-bottom: 0; /* Remove bottom margin for better spacing */
+}
+
+.quick-contact {
+  flex: 1; /* Allows the quick contact to grow */
+  flex-basis: 45%; /* Sets the base size to occupy more space */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flex to fill space */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Use available space evenly */
+}
+
+.contact-form {
+  flex: 1; /* Allows the contact form to grow */
+  flex-basis: 45%; /* Sets the base size to occupy more space */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px; /* Limits the max width of the contact form */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px; /* Space above the map section */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stacks sections on smaller screens */
+  }
+
+  .banner {
+    height: 300px; /* Reduce the height of the banner for smaller screens */
+  }
+
+  .banner-image {
+    object-position: center top; /* Keeps focus centered */
+  }
+
+  .quick-contact, .contact-form {
+    flex-basis: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width to use full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form, .quick-contact {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .banner {
+    height: 250px; /* Further reduce the height of the banner for smaller screens */
+  }
+}
+.social-icons i {
+  margin-right: 10px; /* Adjust the value as needed */
+}

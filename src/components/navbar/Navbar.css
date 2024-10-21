@@ -1,0 +1,212 @@
+/* Navbar base styles */
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+  height: 80px; /* Set the height of the navbar */
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Scrollable content styling */
+.scroll-content {
+  scroll-behavior: smooth;
+}
+
+/* Social Media Icons Styling */
+a[href*="instagram.com"] .fa-instagram {
+  color: #c13584; /* Instagram color */
+}
+
+a[href*="twitter.com"] .fa-twitter {
+  color: #1da1f2; /* Twitter color */
+}
+
+a[href*="facebook.com"] .fa-facebook {
+  color: #1877f2; /* Facebook color */
+}
+
+.para {
+  justify-content: space-around;
+}
+
+.nav {
+  margin-top: 20px;
+  justify-content: space-between;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo {
+  transition: transform 0.3s ease;
+  border-radius: 18px;
+  width: 260px;
+  height: 65px;
+  margin-top: -20px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  
+}
+
+.nav-links li {
+  margin: 0 20px;
+  position: relative; /* For dropdown positioning */
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-links li:hover {
+  transform: translateY(-2px);
+}
+
+.nav-link, .nav-links a {
+  color: #5161ce;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+  padding: 10px 20px; /* Button-like appearance */
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  color: #5161ce;
+}
+
+.nav-links a:active, .nav-links .active {
+  color: #022B51; 
+  font-weight: bold;
+  background-color: #CCE0F5; /* Light blue for active state */
+}
+
+/* Menu Toggle Styling */
+.menu-toggle {
+  cursor: pointer;
+  display: none; /* Initially hidden on desktop */
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #022B51;
+  border-radius: 2px;
+}
+
+.close-icon .bar {
+  width: 25px; /* Cross bar width */
+  height: 2px; /* Cross bar height */
+  background-color: #333; /* Cross bar color */
+  margin: 6px 0; /* Space between cross bars */
+  transition: 0.3s;
+}
+
+.close-icon .bar:first-child {
+  transform: rotate(45deg); /* Rotate first bar for X shape */
+  transform-origin: 50% 50%;
+}
+
+.close-icon .bar:last-child {
+  transform: rotate(-45deg); /* Rotate second bar for X shape */
+  transform-origin: 50% 50%;
+}
+
+@media (min-width: 992px) {
+  /* Hide menu toggle on desktop */
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Show menu toggle on mobile */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: #fff;
+    top: 60px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-link, .nav-links a {
+    display: block;
+    padding: 15px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+  .headericons {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Hide dropdown menus in mobile and iPad views */
+  .dropdown,.service-dropdown 
+  {
+    display: none;
+  }
+}
+@media (max-width: 765px) {
+  .headericons {
+    display: none;
+  }
+
+  .logo{
+    margin-top: 10px;
+    width:50%;
+    height: 70px;
+  }
+}
+

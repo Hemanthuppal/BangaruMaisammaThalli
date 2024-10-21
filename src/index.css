@@ -1,0 +1,12 @@
+body {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  body {
+      font-family: 'Roboto', sans-serif;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #212ea0; /* Light grey color for headings */
+  font-weight: bold; /* Bold font weight for headings */
+}

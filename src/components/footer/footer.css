@@ -1,0 +1,24 @@
+.quick-links-container p {
+    margin-bottom: 5px; /* Reduce the space between links */
+    padding: 0; /* Optional: Remove padding if any */
+  }
+  .zoom-effect {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform property */
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.1); /* Scale up the element to 110% of its original size when hovered */
+  }
+  
+  .zoom-effect:active {
+    transform: scale(0.9); /* Optional: Scale down to 90% when the link is clicked */
+  }
+  
+  .quicklinks{
+    /* font-weight: bold;
+    background: linear-gradient(to right, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color:red;
+    font-weight: bold;
+  }
