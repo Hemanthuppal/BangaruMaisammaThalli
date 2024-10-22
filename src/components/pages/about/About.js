@@ -6,7 +6,7 @@ const About = () => {
     <div 
       className='container-fluid' 
       style={{ 
-        marginTop: "100px", 
+       
         backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDaDPwaU06q9BAZ02YhicBD5MzMNJ2eNINg&s')`,
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
@@ -15,7 +15,7 @@ const About = () => {
         borderRadius: '15px' 
       }}
     >
-      <div className='row'>
+      <div className='row' style={{ marginTop: "100px", }}>
         <div className='col-md-12 text-center mb-5 mt-3'>
           <h1>History of the Shrine</h1>
         </div>

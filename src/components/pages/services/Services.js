@@ -18,7 +18,7 @@ const Services = () => {
     <div 
       className='container text-center' 
       style={{ 
-        marginTop: "100px", 
+      
         backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDaDPwaU06q9BAZ02YhicBD5MzMNJ2eNINg&s')`,
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
@@ -31,8 +31,9 @@ const Services = () => {
         padding: '5px', 
         display: 'inline-block', 
         borderRadius: '5px', 
+        marginTop:"70px"
       }}>
-        <h1>Navratri Avatars of Bhadrakali - 2024</h1>
+        <h1 style={{}}>Navratri Avatars of Bhadrakali - 2024</h1>
       </div>
       <div className='row mt-4'>
         {/* Image and text frame */}
