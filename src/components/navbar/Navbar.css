@@ -212,3 +212,26 @@ a[href*="facebook.com"] .fa-facebook {
   }
 }
 
+/* Add a kukkum-colored background to the Donation link */
+.donation-link {
+  margin-left: auto; /* Pushes the Donation link to the right */
+}
+
+.donation-link a {
+  background-color: #b81c23; /* Kukum color */
+  color: white; /* Text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.donation-link a:hover {
+  background-color: #a71b21; /* Darker kukum shade on hover */
+}
+
+/* Ensure Donation link is still aligned right on mobile */
+@media (max-width: 991px) {
+  .donation-link {
+    margin-left: 0;
+  }
+}

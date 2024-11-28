@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import underline from "./../../img/cropunderline.png"
 
 const About = () => {
   return (
@@ -7,17 +8,24 @@ const About = () => {
       className='container-fluid' 
       style={{ 
        
-        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaDaDPwaU06q9BAZ02YhicBD5MzMNJ2eNINg&s')`,
+        backgroundColor: '#FEFCF3',
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
-        color: 'white', 
+        color: 'black', 
         padding: '20px', 
         borderRadius: '15px' 
       }}
     >
       <div className='row' style={{ marginTop: "100px", }}>
         <div className='col-md-12 text-center mb-5 mt-3'>
-          <h1>History of the Shrine</h1>
+          <h2>History of the Shrine</h2>
+          <div className="text-center mb-5 ">
+          <img
+            src={underline}
+            alt="Underline Decoration"
+            style={{ width: "250px", height: "auto" }}
+          />
+        </div>
         </div>
       </div>
 

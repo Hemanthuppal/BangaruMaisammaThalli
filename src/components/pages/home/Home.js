@@ -19,6 +19,7 @@ import temple4 from './../../img/templeview4IMG-20220413-WA0023@2x.0a3a386a.png'
 import temple5 from './../../img/templeview5IMG-20220413-WA0016@2x.ae152c19.png';
 import temple6 from './../../img/templeview614@2x.b0a8b7de.png';
 import './Home.css'
+import underline from "./../../img/cropunderline.png"
 
 const CarouselComponent = () => {
   const images = [
@@ -30,7 +31,62 @@ const CarouselComponent = () => {
   return (
     <div style={styles.pageBackground}>
       <Carousel images={images} />
-      <h2 style={{ textAlign: 'center', marginBottom: '50px', marginTop: '50px' }}>Devotee Services</h2>
+
+
+
+  
+      <div className="container mt-4">
+      <style>{`
+        .custom-header {
+          background-color: #FFC067; /* Light orange */
+          color: #4D80FF; /* Light violet */
+          
+          font-size: 1.2rem;
+          text-align: center;
+          padding: 10px;
+        }
+        .table th, .table td {
+          text-align: center;
+          vertical-align: middle;
+        }
+      `}</style>
+      <div className="card shadow">
+        <div className="card-header custom-header">
+        Visiting Timings of Sravanthi Devi - Bangaru Maisamma Thalli Temple
+        </div>
+        <div className="card-body">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th>Temple Darshan Timing</th>
+                <th>Timings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Morning Darshan</td>
+                <td>6:30 AM to 12:30 PM</td>
+              </tr>
+              <tr>
+                <td>Evening Darshan</td>
+                <td>3:30 PM to 12:30 AM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+ 
+ 
+
+      <h2 style={{ textAlign: 'center', marginBottom: '10px', marginTop: '50px' }}>Devotee Services</h2>
+      <div className="text-center mb-5 ">
+          <img
+            src={underline}
+            alt="Underline Decoration"
+            style={{ width: "200px", height: "auto" }}
+          />
+        </div>
       
       <div className='container'>
   <div className='row'>
@@ -104,7 +160,14 @@ const CarouselComponent = () => {
 
 <div className='container'>
   <div className='row mt-5'>
-    <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>Gallery</h2>
+    <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>Gallery</h2>
+    <div className="text-center mb-5">
+          <img
+            src={underline}
+            alt="Underline Decoration"
+            style={{ width: "200px", height: "auto" }}
+          />
+        </div>
 
     {/* For all devices */}
     <div className='col-12 col-md-6'>
@@ -159,7 +222,7 @@ const CarouselComponent = () => {
 <div className='container-fluid' 
   style={{ 
    
-    backgroundColor: '#FEEE91', 
+    backgroundColor: '#FEFCF3', 
     color: 'black', 
     padding: '20px', 
     borderRadius: '15px' 
@@ -167,7 +230,14 @@ const CarouselComponent = () => {
 >
   <div className='row'>
     <div className='col-md-12 text-center mb-3 '>
-      <h1>About Temple</h1>
+      <h3>About Temple</h3>
+      <div className="text-center mb-5">
+          <img
+            src={underline}
+            alt="Underline Decoration"
+            style={{ width: "200px", height: "auto" }}
+          />
+        </div>
     </div>
   </div>
   <div className='container'>
@@ -203,7 +273,7 @@ const CarouselComponent = () => {
 
 const styles = {
   pageBackground: {
-    backgroundColor: '#FEEE91',
+    backgroundColor: '#FEFCF3',
     padding: '40px 0',
   },
   card: {
@@ -247,6 +317,8 @@ const styles = {
     top: '-155px',  
     borderRadius: '8px',
   },
+  
+  
 };
 
 export default CarouselComponent;

@@ -3,13 +3,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../img/bangaru maisamma (3).jpg';
 
-
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState(window.location.pathname);
     const [isOpen, setIsOpen] = useState(false);
-    const [active, setActive] = useState("");
-    const [isProductsDropdownOpen, setProductsDropdownOpen] = useState(false);
     const [showScrollContent, setShowScrollContent] = useState(false);
+    const [isProductsDropdownOpen, setProductsDropdownOpen] = useState(false);
     const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const navigate = useNavigate();
     const closingTimer = useRef(null);
@@ -24,7 +22,7 @@ const Navbar = () => {
     }, []);
 
     const handleSetActive = (link) => {
-        setActiveLink(activeLink);
+        setActiveLink(link);
         setIsOpen(false);
     };
 
@@ -41,28 +39,24 @@ const Navbar = () => {
     const closeProductsDropdown = () => {
         closingTimer.current = setTimeout(() => {
             setProductsDropdownOpen(false);
-        }, 300); // Delay the closing by 300 ms
+        }, 300);
     };
 
     const openServicesDropdown = () => {
         clearTimeout(closingTimer.current);
         setServicesDropdownOpen(true);
-        setProductsDropdownOpen(false); // Close products dropdown if open
+        setProductsDropdownOpen(false);
     };
 
     const closeServicesDropdown = () => {
         closingTimer.current = setTimeout(() => {
             setServicesDropdownOpen(false);
-        }, 300); // Delay the closing by 300 ms
+        }, 300);
     };
 
-
-
     return (
-        <>
-        <div className='navabar-itzone' >
-           
-            <nav className={`navbar ${showScrollContent ? 'fixed-top' : ''}`} style={{ position: 'fixed', width: '100%',height: "100px", zIndex: 100 }}>
+        <div className='navbar-itzone'>
+            <nav className={`navbar ${showScrollContent ? 'fixed-top' : ''}`} style={{ position: 'fixed', width: '100%', height: "100px", zIndex: 100 }}>
                 <div className="navbar-container">
                     <img src={logo} alt="Logo" className="logo img-fluid" />
                     <div className="menu-toggle" onClick={toggleMenu}>
@@ -80,67 +74,23 @@ const Navbar = () => {
                         )}
                     </div>
                     <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-                        <li>
-                            <a
-                                href="/"
-                                className={`nav-item ${activeLink === "/" ? "active" : ""}`}
-                                onClick={() => handleSetActive("home")}
-                            >
-                                Home
-                            </a>
-                        </li>
+                        <li><a href="/" className={`nav-item ${activeLink === "/" ? "active" : ""}`} onClick={() => handleSetActive("/")}>Home</a></li>
                         <li onMouseEnter={openProductsDropdown} onMouseLeave={closeProductsDropdown}>
-                            <a
-                                href="/products"
-                                className={`nav-item ${activeLink === "/products" ? "active" : ""}`}
-                                onClick={() => handleSetActive("products")}
-                            >
-                                Gallery
-                            </a>
-                          
+                            <a href="/products" className={`nav-item ${activeLink === "/products" ? "active" : ""}`} onClick={() => handleSetActive("/products")}>Gallery</a>
                         </li>
                         <li onMouseEnter={openServicesDropdown} onMouseLeave={closeServicesDropdown}>
-                            <a
-                                href="/services"
-                                className={`nav-item ${activeLink === "/services" ? "active" : ""}`}
-                                onClick={() => handleSetActive("services")}
-                            >
-                                Event
-                            </a>
-                          
+                            <a href="/events" className={`nav-item ${activeLink === "/events" ? "active" : ""}`} onClick={() => handleSetActive("/events")}>Event</a>
                         </li>
-                        <li>
-                            <a
-                                href="/about"
-                                className={`nav-item ${activeLink === "/about" ? "active" : ""}`}
-                                onClick={() => handleSetActive("about")}
-                            >
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/donation"
-                                className={`nav-item ${activeLink === "/donation" ? "active" : ""}`}
-                                onClick={() => handleSetActive("donation")}
-                            >
-                                Donation
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/contact"
-                                className={`nav-item ${activeLink === "/contact" ? "active" : ""}`}
-                                onClick={() => handleSetActive("contact")}
-                            >
-                                Contact
-                            </a>
+                        <li><a href="/about" className={`nav-item ${activeLink === "/about" ? "active" : ""}`} onClick={() => handleSetActive("/about")}>About</a></li>
+                        <li><a href="/service" className={`nav-item ${activeLink === "/service" ? "active" : ""}`} onClick={() => handleSetActive("/service")}>Service</a></li>
+                        <li><a href="/contact" className={`nav-item ${activeLink === "/contact" ? "active" : ""}`} onClick={() => handleSetActive("/contact")}>Contact</a></li>
+                        <li className="donation-link">
+                            <a href="/donation" className={`nav-item ${activeLink === "/donation" ? "active" : ""}`} onClick={() => handleSetActive("/donation")}>Donation</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            </div>
-        </>
+        </div>
     );
 };
 
